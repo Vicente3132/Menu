@@ -1,0 +1,54 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column; /* Cambia la dirección a columna */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f1c430;
+}
+
+#pdf-container {
+  width: 100%;
+  max-width: 800px; /* Ancho máximo para dispositivos grandes */
+  height: 90vh; /* Altura del 90% de la ventana */
+  border: 5px solid #f8320f;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: auto; /* Barra de desplazamiento si el contenido es grande */
+}
+
+#pdf-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+/* Contenedor del clip giratorio */
+.clip-container {
+  position: absolute; /* Posicionamiento absoluto */
+  top: 800px; /* Distancia desde la parte superior */
+  left: 30%; /* Distancia desde la izquierda */
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+/* Estilos para el enlace con el clip giratorio */
+.link-with-clip {
+  text-decoration: none;
+  color: #401eee;
+  font-size: 25px;
+  display: inline-flex;
+  align-items: center;
+  margin-top: 0px; /* Espacio entre el canvas y el enlace */
+}
+
+.link-with-clip:hover {
+  color: #e01414;
+}
+
+/* Ajusta la velocidad de la animación del clip */
+.fa-shake {
+  animation-duration: 0.5s; /* Cambia la duración de la animación */
+  margin-right: 8px; /* Espacio entre el ícono y el texto */
+}
